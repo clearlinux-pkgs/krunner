@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : krunner
-Version  : 5.51.0
-Release  : 5
-URL      : https://download.kde.org/stable/frameworks/5.51/krunner-5.51.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.51/krunner-5.51.0.tar.xz
-Source99 : https://download.kde.org/stable/frameworks/5.51/krunner-5.51.0.tar.xz.sig
+Version  : 5.52.0
+Release  : 6
+URL      : https://download.kde.org/stable/frameworks/5.52/krunner-5.52.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.52/krunner-5.52.0.tar.xz
+Source99 : https://download.kde.org/stable/frameworks/5.52/krunner-5.52.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -32,6 +32,14 @@ cd build
 cmake -DCMAKE_INSTALL_PREFIX=MYPREFIX ..
 make
 make install
+
+%package abi
+Summary: abi components for the krunner package.
+Group: Default
+
+%description abi
+abi components for the krunner package.
+
 
 %package data
 Summary: data components for the krunner package.
@@ -71,14 +79,14 @@ license components for the krunner package.
 
 
 %prep
-%setup -q -n krunner-5.51.0
+%setup -q -n krunner-5.52.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1539647984
+export SOURCE_DATE_EPOCH=1541882489
 mkdir -p clr-build
 pushd clr-build
 %cmake ..
@@ -86,7 +94,7 @@ make  %{?_smp_mflags} VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1539647984
+export SOURCE_DATE_EPOCH=1541882489
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/krunner
 cp COPYING.LIB %{buildroot}/usr/share/package-licenses/krunner/COPYING.LIB
@@ -96,6 +104,10 @@ popd
 
 %files
 %defattr(-,root,root,-)
+
+%files abi
+%defattr(-,root,root,-)
+/usr/share/abi/libKF5Runner.so.5.52.0.abi
 
 %files data
 %defattr(-,root,root,-)
@@ -128,7 +140,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKF5Runner.so.5
-/usr/lib64/libKF5Runner.so.5.51.0
+/usr/lib64/libKF5Runner.so.5.52.0
 /usr/lib64/qt5/qml/org/kde/runnermodel/librunnermodelplugin.so
 /usr/lib64/qt5/qml/org/kde/runnermodel/qmldir
 
