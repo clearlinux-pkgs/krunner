@@ -5,12 +5,12 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : krunner
-Version  : 5.53.0
-Release  : 10
-URL      : https://download.kde.org/stable/frameworks/5.53/krunner-5.53.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.53/krunner-5.53.0.tar.xz
-Source99 : https://download.kde.org/stable/frameworks/5.53/krunner-5.53.0.tar.xz.sig
-Summary  : No detailed summary available
+Version  : 5.54.0
+Release  : 11
+URL      : https://download.kde.org/stable/frameworks/5.54/krunner-5.54.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.54/krunner-5.54.0.tar.xz
+Source99 : https://download.kde.org/stable/frameworks/5.54/krunner-5.54.0.tar.xz.sig
+Summary  : Framework for providing different actions given a string query
 Group    : Development/Tools
 License  : LGPL-2.1
 Requires: krunner-data = %{version}-%{release}
@@ -18,17 +18,8 @@ Requires: krunner-lib = %{version}-%{release}
 Requires: krunner-license = %{version}-%{release}
 BuildRequires : buildreq-cmake
 BuildRequires : buildreq-kde
-BuildRequires : kcodecs-dev
-BuildRequires : kcompletion-dev
-BuildRequires : kitemviews-dev
-BuildRequires : kjobwidgets-dev
-BuildRequires : kpackage-dev
-BuildRequires : kwidgetsaddons-dev
-BuildRequires : kwindowsystem-dev
-BuildRequires : kxmlgui-dev
 BuildRequires : plasma-framework-dev
 BuildRequires : qtbase-dev mesa-dev
-BuildRequires : solid-dev
 BuildRequires : threadweaver-dev
 
 %description
@@ -80,14 +71,14 @@ license components for the krunner package.
 
 
 %prep
-%setup -q -n krunner-5.53.0
+%setup -q -n krunner-5.54.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1544663147
+export SOURCE_DATE_EPOCH=1547331201
 mkdir -p clr-build
 pushd clr-build
 %cmake ..
@@ -95,7 +86,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1544663147
+export SOURCE_DATE_EPOCH=1547331201
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/krunner
 cp COPYING.LIB %{buildroot}/usr/share/package-licenses/krunner/COPYING.LIB
@@ -137,7 +128,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKF5Runner.so.5
-/usr/lib64/libKF5Runner.so.5.53.0
+/usr/lib64/libKF5Runner.so.5.54.0
 /usr/lib64/qt5/qml/org/kde/runnermodel/librunnermodelplugin.so
 /usr/lib64/qt5/qml/org/kde/runnermodel/qmldir
 
