@@ -6,7 +6,7 @@
 #
 Name     : krunner
 Version  : 5.53.0
-Release  : 9
+Release  : 10
 URL      : https://download.kde.org/stable/frameworks/5.53/krunner-5.53.0.tar.xz
 Source0  : https://download.kde.org/stable/frameworks/5.53/krunner-5.53.0.tar.xz
 Source99 : https://download.kde.org/stable/frameworks/5.53/krunner-5.53.0.tar.xz.sig
