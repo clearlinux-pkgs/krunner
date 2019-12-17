@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : krunner
-Version  : 5.64.0
-Release  : 22
-URL      : https://download.kde.org/stable/frameworks/5.64/krunner-5.64.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.64/krunner-5.64.0.tar.xz
-Source1 : https://download.kde.org/stable/frameworks/5.64/krunner-5.64.0.tar.xz.sig
+Version  : 5.65.0
+Release  : 23
+URL      : https://download.kde.org/stable/frameworks/5.65/krunner-5.65.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.65/krunner-5.65.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.65/krunner-5.65.0.tar.xz.sig
 Summary  : Framework for providing different actions given a string query
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -18,17 +18,8 @@ Requires: krunner-lib = %{version}-%{release}
 Requires: krunner-license = %{version}-%{release}
 BuildRequires : buildreq-cmake
 BuildRequires : buildreq-kde
-BuildRequires : kcodecs-dev
-BuildRequires : kcompletion-dev
-BuildRequires : kitemviews-dev
-BuildRequires : kjobwidgets-dev
-BuildRequires : kpackage-dev
-BuildRequires : kwidgetsaddons-dev
-BuildRequires : kwindowsystem-dev
-BuildRequires : kxmlgui-dev
 BuildRequires : plasma-framework-dev
 BuildRequires : qtbase-dev mesa-dev
-BuildRequires : solid-dev
 BuildRequires : threadweaver-dev
 
 %description
@@ -57,7 +48,6 @@ Requires: krunner-lib = %{version}-%{release}
 Requires: krunner-data = %{version}-%{release}
 Provides: krunner-devel = %{version}-%{release}
 Requires: krunner = %{version}-%{release}
-Requires: krunner = %{version}-%{release}
 
 %description dev
 dev components for the krunner package.
@@ -82,17 +72,17 @@ license components for the krunner package.
 
 
 %prep
-%setup -q -n krunner-5.64.0
+%setup -q -n krunner-5.65.0
+cd %{_builddir}/krunner-5.65.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1573430488
+export SOURCE_DATE_EPOCH=1576543439
 mkdir -p clr-build
 pushd clr-build
-# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -106,10 +96,10 @@ make  %{?_smp_mflags}  VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1573430488
+export SOURCE_DATE_EPOCH=1576543439
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/krunner
-cp %{_builddir}/krunner-5.64.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/krunner/01a6b4bf79aca9b556822601186afab86e8c4fbf
+cp %{_builddir}/krunner-5.65.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/krunner/01a6b4bf79aca9b556822601186afab86e8c4fbf
 pushd clr-build
 %make_install
 popd
@@ -148,7 +138,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKF5Runner.so.5
-/usr/lib64/libKF5Runner.so.5.64.0
+/usr/lib64/libKF5Runner.so.5.65.0
 /usr/lib64/qt5/qml/org/kde/runnermodel/librunnermodelplugin.so
 /usr/lib64/qt5/qml/org/kde/runnermodel/qmldir
 
