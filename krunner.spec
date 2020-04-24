@@ -6,7 +6,7 @@
 #
 Name     : krunner
 Version  : 5.69.0
-Release  : 27
+Release  : 28
 URL      : https://download.kde.org/stable/frameworks/5.69/krunner-5.69.0.tar.xz
 Source0  : https://download.kde.org/stable/frameworks/5.69/krunner-5.69.0.tar.xz
 Source1  : https://download.kde.org/stable/frameworks/5.69/krunner-5.69.0.tar.xz.sig
@@ -18,8 +18,14 @@ Requires: krunner-lib = %{version}-%{release}
 Requires: krunner-license = %{version}-%{release}
 BuildRequires : buildreq-cmake
 BuildRequires : buildreq-kde
+BuildRequires : extra-cmake-modules-data
+BuildRequires : kconfig-dev
+BuildRequires : kcoreaddons-dev
+BuildRequires : ki18n-dev
+BuildRequires : kio-dev
+BuildRequires : kservice-dev
 BuildRequires : plasma-framework-dev
-BuildRequires : qtbase-dev mesa-dev
+BuildRequires : qtbase-dev
 BuildRequires : threadweaver-dev
 
 %description
@@ -80,7 +86,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1586976618
+export SOURCE_DATE_EPOCH=1587703142
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -96,7 +102,7 @@ make  %{?_smp_mflags}  VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1586976618
+export SOURCE_DATE_EPOCH=1587703142
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/krunner
 cp %{_builddir}/krunner-5.69.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/krunner/01a6b4bf79aca9b556822601186afab86e8c4fbf
