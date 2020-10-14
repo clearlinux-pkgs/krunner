@@ -5,14 +5,14 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : krunner
-Version  : 5.73.0
-Release  : 31
-URL      : https://download.kde.org/stable/frameworks/5.73/krunner-5.73.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.73/krunner-5.73.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.73/krunner-5.73.0.tar.xz.sig
+Version  : 5.75.0
+Release  : 32
+URL      : https://download.kde.org/stable/frameworks/5.75/krunner-5.75.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.75/krunner-5.75.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.75/krunner-5.75.0.tar.xz.sig
 Summary  : Framework for providing different actions given a string query
 Group    : Development/Tools
-License  : LGPL-2.1
+License  : LGPL-2.0 LGPL-2.1
 Requires: krunner-data = %{version}-%{release}
 Requires: krunner-lib = %{version}-%{release}
 Requires: krunner-license = %{version}-%{release}
@@ -29,15 +29,12 @@ BuildRequires : qtbase-dev mesa-dev
 BuildRequires : threadweaver-dev
 
 %description
-Runner Template
-----------------------
--- Build instructions --
-cd /where/your/runner/is/installed
-mkdir build
-cd build
-cmake -DCMAKE_INSTALL_PREFIX=MYPREFIX ..
-make
-make install
+# KRunner
+Framework for Plasma runners
+## Introduction
+The Plasma workspace provides an application called KRunner which, among other
+things, allows one to type into a text area which causes various actions and
+information that match the text appear as the text is being typed.
 
 %package data
 Summary: data components for the krunner package.
@@ -78,15 +75,15 @@ license components for the krunner package.
 
 
 %prep
-%setup -q -n krunner-5.73.0
-cd %{_builddir}/krunner-5.73.0
+%setup -q -n krunner-5.75.0
+cd %{_builddir}/krunner-5.75.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1597711625
+export SOURCE_DATE_EPOCH=1602699854
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -102,10 +99,12 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1597711625
+export SOURCE_DATE_EPOCH=1602699854
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/krunner
-cp %{_builddir}/krunner-5.73.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/krunner/01a6b4bf79aca9b556822601186afab86e8c4fbf
+cp %{_builddir}/krunner-5.75.0/LICENSES/LGPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/krunner/20079e8f79713dce80ab09774505773c926afa2a
+cp %{_builddir}/krunner-5.75.0/LICENSES/LGPL-2.1-or-later.txt %{buildroot}/usr/share/package-licenses/krunner/6f1f675aa5f6a2bbaa573b8343044b166be28399
+cp %{_builddir}/krunner-5.75.0/templates/runner/LICENSES/LGPL-2.1-or-later.txt %{buildroot}/usr/share/package-licenses/krunner/6f1f675aa5f6a2bbaa573b8343044b166be28399
 pushd clr-build
 %make_install
 popd
@@ -117,6 +116,7 @@ popd
 %defattr(-,root,root,-)
 /usr/share/dbus-1/interfaces/kf5_org.kde.krunner1.xml
 /usr/share/kdevappwizard/templates/runner.tar.bz2
+/usr/share/kdevappwizard/templates/runnerpython.tar.bz2
 /usr/share/kservicetypes5/plasma-runner.desktop
 /usr/share/qlogging-categories5/krunner.categories
 /usr/share/qlogging-categories5/krunner.renamecategories
@@ -145,10 +145,11 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKF5Runner.so.5
-/usr/lib64/libKF5Runner.so.5.73.0
+/usr/lib64/libKF5Runner.so.5.75.0
 /usr/lib64/qt5/qml/org/kde/runnermodel/librunnermodelplugin.so
 /usr/lib64/qt5/qml/org/kde/runnermodel/qmldir
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/krunner/01a6b4bf79aca9b556822601186afab86e8c4fbf
+/usr/share/package-licenses/krunner/20079e8f79713dce80ab09774505773c926afa2a
+/usr/share/package-licenses/krunner/6f1f675aa5f6a2bbaa573b8343044b166be28399
