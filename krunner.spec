@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : krunner
-Version  : 5.91.0
-Release  : 46
-URL      : https://download.kde.org/stable/frameworks/5.91/krunner-5.91.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.91/krunner-5.91.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.91/krunner-5.91.0.tar.xz.sig
+Version  : 5.92.0
+Release  : 47
+URL      : https://download.kde.org/stable/frameworks/5.92/krunner-5.92.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.92/krunner-5.92.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.92/krunner-5.92.0.tar.xz.sig
 Summary  : Framework for providing different actions given a string query
 Group    : Development/Tools
 License  : BSD-2-Clause CC0-1.0 GPL-2.0 GPL-3.0 LGPL-2.0 LGPL-2.1
@@ -70,15 +70,15 @@ license components for the krunner package.
 
 
 %prep
-%setup -q -n krunner-5.91.0
-cd %{_builddir}/krunner-5.91.0
+%setup -q -n krunner-5.92.0
+cd %{_builddir}/krunner-5.92.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1644884586
+export SOURCE_DATE_EPOCH=1647639676
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -94,18 +94,19 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1644884586
+export SOURCE_DATE_EPOCH=1647639676
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/krunner
-cp %{_builddir}/krunner-5.91.0/LICENSES/BSD-2-Clause.txt %{buildroot}/usr/share/package-licenses/krunner/ea97eb88ae53ec41e26f8542176ab986d7bc943a
-cp %{_builddir}/krunner-5.91.0/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/krunner/82da472f6d00dc5f0a651f33ebb320aa9c7b08d0
-cp %{_builddir}/krunner-5.91.0/LICENSES/GPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/krunner/3cb34cfc72e87654683f2894299adf912d14b284
-cp %{_builddir}/krunner-5.91.0/LICENSES/LGPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/krunner/20079e8f79713dce80ab09774505773c926afa2a
-cp %{_builddir}/krunner-5.91.0/LICENSES/LGPL-2.1-or-later.txt %{buildroot}/usr/share/package-licenses/krunner/6f1f675aa5f6a2bbaa573b8343044b166be28399
-cp %{_builddir}/krunner-5.91.0/LICENSES/LicenseRef-KDE-Accepted-GPL.txt %{buildroot}/usr/share/package-licenses/krunner/7d9831e05094ce723947d729c2a46a09d6e90275
-cp %{_builddir}/krunner-5.91.0/LICENSES/LicenseRef-KDE-Accepted-GPL.txt %{buildroot}/usr/share/package-licenses/krunner/7d9831e05094ce723947d729c2a46a09d6e90275
-cp %{_builddir}/krunner-5.91.0/src/declarative/qmldir.license %{buildroot}/usr/share/package-licenses/krunner/7ff5a7dd2c915b2b34329c892e06917c5f82f3a4
-cp %{_builddir}/krunner-5.91.0/templates/runner/LICENSES/LGPL-2.1-or-later.txt %{buildroot}/usr/share/package-licenses/krunner/6f1f675aa5f6a2bbaa573b8343044b166be28399
+cp %{_builddir}/krunner-5.92.0/LICENSES/BSD-2-Clause.txt %{buildroot}/usr/share/package-licenses/krunner/ea97eb88ae53ec41e26f8542176ab986d7bc943a
+cp %{_builddir}/krunner-5.92.0/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/krunner/82da472f6d00dc5f0a651f33ebb320aa9c7b08d0
+cp %{_builddir}/krunner-5.92.0/LICENSES/GPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/krunner/3cb34cfc72e87654683f2894299adf912d14b284
+cp %{_builddir}/krunner-5.92.0/LICENSES/LGPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/krunner/20079e8f79713dce80ab09774505773c926afa2a
+cp %{_builddir}/krunner-5.92.0/LICENSES/LGPL-2.1-or-later.txt %{buildroot}/usr/share/package-licenses/krunner/6f1f675aa5f6a2bbaa573b8343044b166be28399
+cp %{_builddir}/krunner-5.92.0/LICENSES/LicenseRef-KDE-Accepted-GPL.txt %{buildroot}/usr/share/package-licenses/krunner/7d9831e05094ce723947d729c2a46a09d6e90275
+cp %{_builddir}/krunner-5.92.0/LICENSES/LicenseRef-KDE-Accepted-GPL.txt %{buildroot}/usr/share/package-licenses/krunner/7d9831e05094ce723947d729c2a46a09d6e90275
+cp %{_builddir}/krunner-5.92.0/README.md.license %{buildroot}/usr/share/package-licenses/krunner/680295cd7d254d11edba2a4e8afd7810c79925d2
+cp %{_builddir}/krunner-5.92.0/src/declarative/qmldir.license %{buildroot}/usr/share/package-licenses/krunner/7ff5a7dd2c915b2b34329c892e06917c5f82f3a4
+cp %{_builddir}/krunner-5.92.0/templates/runner/LICENSES/LGPL-2.1-or-later.txt %{buildroot}/usr/share/package-licenses/krunner/6f1f675aa5f6a2bbaa573b8343044b166be28399
 pushd clr-build
 %make_install
 popd
@@ -149,7 +150,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKF5Runner.so.5
-/usr/lib64/libKF5Runner.so.5.91.0
+/usr/lib64/libKF5Runner.so.5.92.0
 /usr/lib64/qt5/qml/org/kde/runnermodel/librunnermodelplugin.so
 /usr/lib64/qt5/qml/org/kde/runnermodel/qmldir
 
@@ -157,6 +158,7 @@ popd
 %defattr(0644,root,root,0755)
 /usr/share/package-licenses/krunner/20079e8f79713dce80ab09774505773c926afa2a
 /usr/share/package-licenses/krunner/3cb34cfc72e87654683f2894299adf912d14b284
+/usr/share/package-licenses/krunner/680295cd7d254d11edba2a4e8afd7810c79925d2
 /usr/share/package-licenses/krunner/6f1f675aa5f6a2bbaa573b8343044b166be28399
 /usr/share/package-licenses/krunner/7d9831e05094ce723947d729c2a46a09d6e90275
 /usr/share/package-licenses/krunner/7ff5a7dd2c915b2b34329c892e06917c5f82f3a4
