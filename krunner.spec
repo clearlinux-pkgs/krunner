@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : krunner
-Version  : 5.101.0
-Release  : 56
-URL      : https://download.kde.org/stable/frameworks/5.101/krunner-5.101.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.101/krunner-5.101.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.101/krunner-5.101.0.tar.xz.sig
+Version  : 5.102.0
+Release  : 57
+URL      : https://download.kde.org/stable/frameworks/5.102/krunner-5.102.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.102/krunner-5.102.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.102/krunner-5.102.0.tar.xz.sig
 Summary  : Framework for providing different actions given a string query
 Group    : Development/Tools
 License  : BSD-2-Clause CC0-1.0 GPL-2.0 GPL-3.0 LGPL-2.0 LGPL-2.1
@@ -27,6 +27,9 @@ BuildRequires : kio-dev
 BuildRequires : kservice-dev
 BuildRequires : plasma-framework-dev
 BuildRequires : threadweaver-dev
+# Suppress stripping binaries
+%define __strip /bin/true
+%define debug_package %{nil}
 
 %description
 SPDX-License-Identifier: CC0-1.0
@@ -70,31 +73,31 @@ license components for the krunner package.
 
 
 %prep
-%setup -q -n krunner-5.101.0
-cd %{_builddir}/krunner-5.101.0
+%setup -q -n krunner-5.102.0
+cd %{_builddir}/krunner-5.102.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1671130251
+export SOURCE_DATE_EPOCH=1673967439
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
-export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
-export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
 %cmake ..
 make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1671130251
+export SOURCE_DATE_EPOCH=1673967439
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/krunner
 cp %{_builddir}/krunner-%{version}/LICENSES/BSD-2-Clause.txt %{buildroot}/usr/share/package-licenses/krunner/ea97eb88ae53ec41e26f8542176ab986d7bc943a || :
@@ -151,7 +154,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKF5Runner.so.5
-/usr/lib64/libKF5Runner.so.5.101.0
+/usr/lib64/libKF5Runner.so.5.102.0
 /usr/lib64/qt5/qml/org/kde/runnermodel/librunnermodelplugin.so
 /usr/lib64/qt5/qml/org/kde/runnermodel/qmldir
 
