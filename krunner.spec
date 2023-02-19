@@ -6,7 +6,7 @@
 #
 Name     : krunner
 Version  : 5.103.0
-Release  : 58
+Release  : 59
 URL      : https://download.kde.org/stable/frameworks/5.103/krunner-5.103.0.tar.xz
 Source0  : https://download.kde.org/stable/frameworks/5.103/krunner-5.103.0.tar.xz
 Source1  : https://download.kde.org/stable/frameworks/5.103/krunner-5.103.0.tar.xz.sig
@@ -25,6 +25,7 @@ BuildRequires : kcoreaddons-dev
 BuildRequires : ki18n-dev
 BuildRequires : kio-dev
 BuildRequires : kservice-dev
+BuildRequires : pkgconfig(x11)
 BuildRequires : plasma-framework-dev
 BuildRequires : threadweaver-dev
 # Suppress stripping binaries
@@ -81,7 +82,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1676327503
+export SOURCE_DATE_EPOCH=1676825186
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -97,7 +98,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1676327503
+export SOURCE_DATE_EPOCH=1676825186
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/krunner
 cp %{_builddir}/krunner-%{version}/LICENSES/BSD-2-Clause.txt %{buildroot}/usr/share/package-licenses/krunner/ea97eb88ae53ec41e26f8542176ab986d7bc943a || :
