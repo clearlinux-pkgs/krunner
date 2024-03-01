@@ -1,5 +1,5 @@
 PKG_NAME := krunner
-URL = https://download.kde.org/stable/frameworks/5.115/krunner-5.115.0.tar.xz
+URL = https://download.kde.org/stable/frameworks/6.0/krunner-6.0.0.tar.xz
 ARCHIVES = 
 
 include ../common/Makefile.common
