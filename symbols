@@ -1,176 +1,39 @@
-libKF6Runner.so.6:KRunner::QueryMatch::setActions(QList<KRunner::Action> const&)
-libKF6Runner.so.6:KRunner::QueryMatch::setEnabled(bool)
-libKF6Runner.so.6:KRunner::QueryMatch::setSubtext(QString const&)
-libKF6Runner.so.6:KRunner::QueryMatch::setIconName(QString const&)
-libKF6Runner.so.6:KRunner::QueryMatch::setMultiLine(bool)
-libKF6Runner.so.6:KRunner::QueryMatch::setRelevance(double)
-libKF6Runner.so.6:KRunner::QueryMatch::setMatchCategory(QString const&)
-libKF6Runner.so.6:KRunner::QueryMatch::setCategoryRelevance(double)
-libKF6Runner.so.6:KRunner::QueryMatch::setId(QString const&)
-libKF6Runner.so.6:KRunner::QueryMatch::setData(QVariant const&)
-libKF6Runner.so.6:KRunner::QueryMatch::setIcon(QIcon const&)
-libKF6Runner.so.6:KRunner::QueryMatch::setText(QString const&)
-libKF6Runner.so.6:KRunner::QueryMatch::setUrls(QList<QUrl> const&)
-libKF6Runner.so.6:KRunner::QueryMatch::addAction(KRunner::Action const&)
-libKF6Runner.so.6:KRunner::QueryMatch::QueryMatch(KRunner::AbstractRunner*)
-libKF6Runner.so.6:KRunner::QueryMatch::QueryMatch(KRunner::QueryMatch const&)
-libKF6Runner.so.6:KRunner::QueryMatch::QueryMatch(KRunner::AbstractRunner*)
-libKF6Runner.so.6:KRunner::QueryMatch::QueryMatch(KRunner::QueryMatch const&)
-libKF6Runner.so.6:KRunner::QueryMatch::~QueryMatch()
-libKF6Runner.so.6:KRunner::QueryMatch::~QueryMatch()
-libKF6Runner.so.6:KRunner::QueryMatch::operator=(KRunner::QueryMatch const&)
-libKF6Runner.so.6:KRunner::ResultsModel::resetLimit()
-libKF6Runner.so.6:KRunner::ResultsModel::qt_metacall(QMetaObject::Call, int, void**)
-libKF6Runner.so.6:KRunner::ResultsModel::qt_metacast(char const*)
-libKF6Runner.so.6:KRunner::ResultsModel::limitChanged()
-libKF6Runner.so.6:KRunner::ResultsModel::setFavoriteIds(QList<QString> const&)
-libKF6Runner.so.6:KRunner::ResultsModel::setQueryString(QString const&)
-libKF6Runner.so.6:KRunner::ResultsModel::queryingChanged()
-libKF6Runner.so.6:KRunner::ResultsModel::setSingleRunner(QString const&)
-libKF6Runner.so.6:KRunner::ResultsModel::favoriteIdsChanged()
-libKF6Runner.so.6:KRunner::ResultsModel::queryStringChanged(QString const&)
-libKF6Runner.so.6:KRunner::ResultsModel::singleRunnerChanged()
-libKF6Runner.so.6:KRunner::ResultsModel::queryStringChangeRequested(QString const&, int)
-libKF6Runner.so.6:KRunner::ResultsModel::run(QModelIndex const&)
-libKF6Runner.so.6:KRunner::ResultsModel::clear()
-libKF6Runner.so.6:KRunner::ResultsModel::setLimit(int)
-libKF6Runner.so.6:KRunner::ResultsModel::runAction(QModelIndex const&, int)
-libKF6Runner.so.6:KRunner::ResultsModel::ResultsModel(QObject*)
-libKF6Runner.so.6:KRunner::ResultsModel::ResultsModel(KConfigGroup const&, KConfigGroup const&, QObject*)
-libKF6Runner.so.6:KRunner::ResultsModel::ResultsModel(QObject*)
-libKF6Runner.so.6:KRunner::ResultsModel::ResultsModel(KConfigGroup const&, KConfigGroup const&, QObject*)
-libKF6Runner.so.6:KRunner::ResultsModel::~ResultsModel()
-libKF6Runner.so.6:KRunner::ResultsModel::~ResultsModel()
-libKF6Runner.so.6:KRunner::ResultsModel::~ResultsModel()
-libKF6Runner.so.6:KRunner::RunnerSyntax::RunnerSyntax(QList<QString> const&, QString const&)
-libKF6Runner.so.6:KRunner::RunnerSyntax::RunnerSyntax(KRunner::RunnerSyntax const&)
-libKF6Runner.so.6:KRunner::RunnerSyntax::RunnerSyntax(QList<QString> const&, QString const&)
-libKF6Runner.so.6:KRunner::RunnerSyntax::RunnerSyntax(KRunner::RunnerSyntax const&)
-libKF6Runner.so.6:KRunner::RunnerSyntax::~RunnerSyntax()
-libKF6Runner.so.6:KRunner::RunnerSyntax::~RunnerSyntax()
-libKF6Runner.so.6:KRunner::RunnerSyntax::operator=(KRunner::RunnerSyntax const&)
-libKF6Runner.so.6:KRunner::RunnerContext::addMatches(QList<KRunner::QueryMatch> const&)
-libKF6Runner.so.6:KRunner::RunnerContext::addMatch(KRunner::QueryMatch const&)
-libKF6Runner.so.6:KRunner::RunnerContext::setQuery(QString const&)
-libKF6Runner.so.6:KRunner::RunnerContext::RunnerContext(KRunner::RunnerManager*)
-libKF6Runner.so.6:KRunner::RunnerContext::RunnerContext(KRunner::RunnerContext const&)
-libKF6Runner.so.6:KRunner::RunnerContext::RunnerContext(KRunner::RunnerManager*)
-libKF6Runner.so.6:KRunner::RunnerContext::RunnerContext(KRunner::RunnerContext const&)
-libKF6Runner.so.6:KRunner::RunnerContext::~RunnerContext()
-libKF6Runner.so.6:KRunner::RunnerContext::~RunnerContext()
-libKF6Runner.so.6:KRunner::RunnerContext::operator=(KRunner::RunnerContext const&)
-libKF6Runner.so.6:KRunner::RunnerManager::loadRunner(KPluginMetaData const&)
-libKF6Runner.so.6:KRunner::RunnerManager::launchQuery(QString const&, QString const&)
-libKF6Runner.so.6:KRunner::RunnerManager::qt_metacall(QMetaObject::Call, int, void**)
-libKF6Runner.so.6:KRunner::RunnerManager::qt_metacast(char const*)
-libKF6Runner.so.6:KRunner::RunnerManager::queryFinished()
-libKF6Runner.so.6:KRunner::RunnerManager::historyEnabled()
-libKF6Runner.so.6:KRunner::RunnerManager::matchesChanged(QList<KRunner::QueryMatch> const&)
-libKF6Runner.so.6:KRunner::RunnerManager::removeFromHistory(int)
-libKF6Runner.so.6:KRunner::RunnerManager::setAllowedRunners(QList<QString> const&)
-libKF6Runner.so.6:KRunner::RunnerManager::setHistoryEnabled(bool)
-libKF6Runner.so.6:KRunner::RunnerManager::setupMatchSession()
-libKF6Runner.so.6:KRunner::RunnerManager::runnerMetaDataList()
-libKF6Runner.so.6:KRunner::RunnerManager::reloadConfiguration()
-libKF6Runner.so.6:KRunner::RunnerManager::matchSessionComplete()
-libKF6Runner.so.6:KRunner::RunnerManager::historyEnabledChanged()
-libKF6Runner.so.6:KRunner::RunnerManager::requestUpdateQueryString(QString const&, int)
-libKF6Runner.so.6:KRunner::RunnerManager::setHistoryEnvironmentIdentifier(QString const&)
-libKF6Runner.so.6:KRunner::RunnerManager::run(KRunner::QueryMatch const&, KRunner::Action const&)
-libKF6Runner.so.6:KRunner::RunnerManager::reset()
-libKF6Runner.so.6:KRunner::RunnerManager::RunnerManager(QObject*)
-libKF6Runner.so.6:KRunner::RunnerManager::RunnerManager(KConfigGroup const&, KConfigGroup const&, QObject*)
-libKF6Runner.so.6:KRunner::RunnerManager::RunnerManager(QObject*)
-libKF6Runner.so.6:KRunner::RunnerManager::RunnerManager(KConfigGroup const&, KConfigGroup const&, QObject*)
-libKF6Runner.so.6:KRunner::RunnerManager::~RunnerManager()
-libKF6Runner.so.6:KRunner::RunnerManager::~RunnerManager()
-libKF6Runner.so.6:KRunner::RunnerManager::~RunnerManager()
-libKF6Runner.so.6:KRunner::AbstractRunner::qt_metacall(QMetaObject::Call, int, void**)
-libKF6Runner.so.6:KRunner::AbstractRunner::qt_metacast(char const*)
-libKF6Runner.so.6:KRunner::AbstractRunner::setSyntaxes(QList<KRunner::RunnerSyntax> const&)
-libKF6Runner.so.6:KRunner::AbstractRunner::setMatchRegex(QRegularExpression const&)
-libKF6Runner.so.6:KRunner::AbstractRunner::setTriggerWords(QList<QString> const&)
-libKF6Runner.so.6:KRunner::AbstractRunner::suspendMatching(bool)
-libKF6Runner.so.6:KRunner::AbstractRunner::mimeDataForMatch(KRunner::QueryMatch const&)
-libKF6Runner.so.6:KRunner::AbstractRunner::setMinLetterCount(int)
-libKF6Runner.so.6:KRunner::AbstractRunner::reloadConfiguration()
-libKF6Runner.so.6:KRunner::AbstractRunner::run(KRunner::RunnerContext const&, KRunner::QueryMatch const&)
 libKF6Runner.so.6:KRunner::AbstractRunner::init()
 libKF6Runner.so.6:KRunner::AbstractRunner::prepare()
+libKF6Runner.so.6:KRunner::AbstractRunner::reloadConfiguration()
+libKF6Runner.so.6:KRunner::AbstractRunner::setMinLetterCount(int)
+libKF6Runner.so.6:KRunner::AbstractRunner::suspendMatching(bool)
 libKF6Runner.so.6:KRunner::AbstractRunner::teardown()
-libKF6Runner.so.6:KRunner::AbstractRunner::addSyntax(KRunner::RunnerSyntax const&)
-libKF6Runner.so.6:KRunner::AbstractRunner::AbstractRunner(QObject*, KPluginMetaData const&)
-libKF6Runner.so.6:KRunner::AbstractRunner::AbstractRunner(QObject*, KPluginMetaData const&)
 libKF6Runner.so.6:KRunner::AbstractRunner::~AbstractRunner()
-libKF6Runner.so.6:KRunner::AbstractRunner::~AbstractRunner()
-libKF6Runner.so.6:KRunner::AbstractRunner::~AbstractRunner()
-libKF6Runner.so.6:KRunner::Action::Action(QString const&, QString const&, QString const&)
-libKF6Runner.so.6:KRunner::Action::Action(KRunner::Action const&)
-libKF6Runner.so.6:KRunner::Action::Action()
-libKF6Runner.so.6:KRunner::Action::Action(QString const&, QString const&, QString const&)
-libKF6Runner.so.6:KRunner::Action::Action(KRunner::Action const&)
 libKF6Runner.so.6:KRunner::Action::Action()
 libKF6Runner.so.6:KRunner::Action::~Action()
-libKF6Runner.so.6:KRunner::Action::~Action()
-libKF6Runner.so.6:KRunner::Action::operator=(KRunner::Action const&)
-libKF6Runner.so.6:KRunner::operator<<(QDebug, KRunner::QueryMatch const&)
-libKF6Runner.so.6:KRunner::QueryMatch::isMultiLine() const
-libKF6Runner.so.6:KRunner::QueryMatch::matchCategory() const
-libKF6Runner.so.6:KRunner::QueryMatch::selectedAction() const
-libKF6Runner.so.6:KRunner::QueryMatch::categoryRelevance() const
-libKF6Runner.so.6:KRunner::QueryMatch::id() const
-libKF6Runner.so.6:KRunner::QueryMatch::data() const
-libKF6Runner.so.6:KRunner::QueryMatch::icon() const
-libKF6Runner.so.6:KRunner::QueryMatch::text() const
-libKF6Runner.so.6:KRunner::QueryMatch::urls() const
-libKF6Runner.so.6:KRunner::QueryMatch::runner() const
-libKF6Runner.so.6:KRunner::QueryMatch::actions() const
-libKF6Runner.so.6:KRunner::QueryMatch::isValid() const
-libKF6Runner.so.6:KRunner::QueryMatch::subtext() const
-libKF6Runner.so.6:KRunner::QueryMatch::iconName() const
-libKF6Runner.so.6:KRunner::QueryMatch::isEnabled() const
-libKF6Runner.so.6:KRunner::QueryMatch::relevance() const
-libKF6Runner.so.6:KRunner::QueryMatch::operator==(KRunner::QueryMatch const&) const
-libKF6Runner.so.6:KRunner::QueryMatch::operator!=(KRunner::QueryMatch const&) const
-libKF6Runner.so.6:KRunner::ResultsModel::metaObject() const
-libKF6Runner.so.6:KRunner::ResultsModel::favoriteIds() const
-libKF6Runner.so.6:KRunner::ResultsModel::getMimeData(QModelIndex const&) const
-libKF6Runner.so.6:KRunner::ResultsModel::queryString() const
-libKF6Runner.so.6:KRunner::ResultsModel::singleRunner() const
-libKF6Runner.so.6:KRunner::ResultsModel::getQueryMatch(QModelIndex const&) const
-libKF6Runner.so.6:KRunner::ResultsModel::runnerManager() const
-libKF6Runner.so.6:KRunner::ResultsModel::singleRunnerMetaData() const
-libKF6Runner.so.6:KRunner::ResultsModel::limit() const
-libKF6Runner.so.6:KRunner::ResultsModel::querying() const
-libKF6Runner.so.6:KRunner::ResultsModel::roleNames() const
-libKF6Runner.so.6:KRunner::RunnerSyntax::description() const
-libKF6Runner.so.6:KRunner::RunnerSyntax::exampleQueries() const
-libKF6Runner.so.6:KRunner::RunnerContext::singleRunnerQueryMode() const
-libKF6Runner.so.6:KRunner::RunnerContext::requestQueryStringUpdate(QString const&, int) const
-libKF6Runner.so.6:KRunner::RunnerContext::ignoreCurrentMatchForHistory() const
-libKF6Runner.so.6:KRunner::RunnerContext::query() const
-libKF6Runner.so.6:KRunner::RunnerContext::isValid() const
-libKF6Runner.so.6:KRunner::RunnerContext::matches() const
-libKF6Runner.so.6:KRunner::RunnerManager::metaObject() const
-libKF6Runner.so.6:KRunner::RunnerManager::searchContext() const
-libKF6Runner.so.6:KRunner::RunnerManager::mimeDataForMatch(KRunner::QueryMatch const&) const
-libKF6Runner.so.6:KRunner::RunnerManager::getHistorySuggestion(QString const&) const
-libKF6Runner.so.6:KRunner::RunnerManager::convertDBusRunnerToJson(QString const&) const
-libKF6Runner.so.6:KRunner::RunnerManager::query() const
-libKF6Runner.so.6:KRunner::RunnerManager::runner(QString const&) const
-libKF6Runner.so.6:KRunner::RunnerManager::history() const
-libKF6Runner.so.6:KRunner::RunnerManager::matches() const
-libKF6Runner.so.6:KRunner::RunnerManager::runners() const
-libKF6Runner.so.6:KRunner::AbstractRunner::matchRegex() const
-libKF6Runner.so.6:KRunner::AbstractRunner::metaObject() const
-libKF6Runner.so.6:KRunner::AbstractRunner::hasMatchRegex() const
-libKF6Runner.so.6:KRunner::AbstractRunner::minLetterCount() const
-libKF6Runner.so.6:KRunner::AbstractRunner::isMatchingSuspended() const
-libKF6Runner.so.6:KRunner::AbstractRunner::id() const
-libKF6Runner.so.6:KRunner::AbstractRunner::name() const
-libKF6Runner.so.6:KRunner::AbstractRunner::config() const
-libKF6Runner.so.6:KRunner::AbstractRunner::metadata() const
-libKF6Runner.so.6:KRunner::AbstractRunner::syntaxes() const
-libKF6Runner.so.6:KRunner::Action::iconSource() const
-libKF6Runner.so.6:KRunner::Action::id() const
-libKF6Runner.so.6:KRunner::Action::text() const
+libKF6Runner.so.6:KRunner::QueryMatch::QueryMatch(KRunner::AbstractRunner*)
+libKF6Runner.so.6:KRunner::QueryMatch::setCategoryRelevance(double)
+libKF6Runner.so.6:KRunner::QueryMatch::setEnabled(bool)
+libKF6Runner.so.6:KRunner::QueryMatch::setMultiLine(bool)
+libKF6Runner.so.6:KRunner::QueryMatch::setRelevance(double)
+libKF6Runner.so.6:KRunner::QueryMatch::~QueryMatch()
+libKF6Runner.so.6:KRunner::ResultsModel::ResultsModel(QObject*)
+libKF6Runner.so.6:KRunner::ResultsModel::clear()
+libKF6Runner.so.6:KRunner::ResultsModel::favoriteIdsChanged()
+libKF6Runner.so.6:KRunner::ResultsModel::limitChanged()
+libKF6Runner.so.6:KRunner::ResultsModel::queryingChanged()
+libKF6Runner.so.6:KRunner::ResultsModel::resetLimit()
+libKF6Runner.so.6:KRunner::ResultsModel::setLimit(int)
+libKF6Runner.so.6:KRunner::ResultsModel::singleRunnerChanged()
+libKF6Runner.so.6:KRunner::ResultsModel::~ResultsModel()
+libKF6Runner.so.6:KRunner::RunnerContext::RunnerContext(KRunner::RunnerManager*)
+libKF6Runner.so.6:KRunner::RunnerContext::~RunnerContext()
+libKF6Runner.so.6:KRunner::RunnerManager::RunnerManager(QObject*)
+libKF6Runner.so.6:KRunner::RunnerManager::historyEnabled()
+libKF6Runner.so.6:KRunner::RunnerManager::historyEnabledChanged()
+libKF6Runner.so.6:KRunner::RunnerManager::matchSessionComplete()
+libKF6Runner.so.6:KRunner::RunnerManager::queryFinished()
+libKF6Runner.so.6:KRunner::RunnerManager::reloadConfiguration()
+libKF6Runner.so.6:KRunner::RunnerManager::removeFromHistory(int)
+libKF6Runner.so.6:KRunner::RunnerManager::reset()
+libKF6Runner.so.6:KRunner::RunnerManager::runnerMetaDataList()
+libKF6Runner.so.6:KRunner::RunnerManager::setHistoryEnabled(bool)
+libKF6Runner.so.6:KRunner::RunnerManager::setupMatchSession()
+libKF6Runner.so.6:KRunner::RunnerManager::~RunnerManager()
+libKF6Runner.so.6:KRunner::RunnerSyntax::~RunnerSyntax()
